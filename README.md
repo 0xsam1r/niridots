@@ -2,7 +2,7 @@
   <h1><pre>السلام عليكم ورحمة الله وبركاته</h1> </pre>
 </div>
 
-# In the Making....
+### In the Making....
 this is my niri wm configrations in Arch Linux. 
 
 
@@ -13,4 +13,6 @@ Stay Tuned for new updates :)
 This repo is an evolving workspace. I’m always experimenting — breaking things, fixing them, and documenting my process.
 
 If you're diving into Linux customization, tiling WMs, or secure scripting, feel free to explore or fork!
+
+These dotfiles are released under the **GNU General Public License v3 (GPL-3.0)**, see the [LICENSE](./LICENSE) file.
 
