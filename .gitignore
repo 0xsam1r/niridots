@@ -1,2 +1,4 @@
 /test/*
+/config/zsh/zinit/
+/config/zsh/.zcompdump
 
