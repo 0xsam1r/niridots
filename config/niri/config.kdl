@@ -71,7 +71,7 @@ hotkey-overlay {
 
 prefer-no-csd
 
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+screenshot-path "~/Pictures/ScreenShots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 // -------======== Inputs ========---------- //
 input {
@@ -117,9 +117,15 @@ output "eDP-1" {
 // wiki: https://yalter.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 16
-    always-center-single-column
-    //    empty-workspace-above-first
+    gaps 15
+        struts {
+        left 20
+        right 20
+        top 0
+        bottom 20
+    }
+    // always-center-single-column
+    empty-workspace-above-first
 
     // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
     preset-column-widths {
@@ -208,15 +214,14 @@ layer-rule {
 
 overview {
     workspace-shadow {
-        off
+        on
     }
 }
 
 
 // Example: enable rounded corners for all windows.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-    geometry-corner-radius 5
+window-rule {
+    geometry-corner-radius 7
     clip-to-geometry true
 }
 
