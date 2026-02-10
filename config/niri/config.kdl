@@ -119,10 +119,10 @@ layout {
     // Set gaps around windows in logical pixels.
     gaps 15
         struts {
-        left 20
-        right 20
+        left 10
+        right 10
         top 0
-        bottom 20
+        bottom 10
     }
     // always-center-single-column
     empty-workspace-above-first

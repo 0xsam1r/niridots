@@ -1,0 +1,30 @@
+why you making this bar ?
+to be minimal and small monitring unit and modern and nice design, very fast 
+
+what do you want from bar ?
+- clean colors, modern design 
+- functionable 
+- monitering unit
+
+
+== retro design is awasome 
+
+Needed modules 
+	Workspaces
+	System monitoring 
+	Tray
+	Upower or battery
+	sound & brightness
+	time
+	date (optional)
+	packman (new packages)
+	keyboard lang indicator (looks nice in ends of bar)
+	privacy_indicator
+	media (less usefull)
+
+
+Nice examples
+
+(Design and Structure)
+https://www.reddit.com/r/unixporn/comments/1qh59ks/hyprland_design_is_not_for_philosophy_its_for/
+
