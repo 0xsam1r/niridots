@@ -21,7 +21,7 @@
    MODULE CONTAINERS
 ===================================================== */
 .modules-left {
-  margin-left: 8px;
+  margin-left: 0px;
 }
 
 .modules-center {
@@ -29,7 +29,7 @@
 }
 
 .modules-right {
-  margin-right: 8px;
+  margin-right: 0px;
 }
 /* =====================================================
    WORKSPACES (HARD GTK RESET – NO SIDE LINES)
@@ -40,7 +40,7 @@
   background: transparent;
   color: #7d8596;
 
-  padding: 0 6px;
+  padding: 0 3px;
   margin: 0 2px;
 
   border: none;
@@ -79,7 +79,6 @@
 /* Active workspace */
 #workspaces button.active {
   color: #38bdf8;
-  border-bottom: 2px solid #38bdf8;
 
   box-shadow: none;
   background-image: none;
@@ -121,18 +120,22 @@
 #pulseaudio,
 #cpu,
 #battery,
+#memory,
 #custom-update,
-#tray {
-  margin: 0 4px;
-  padding: 0 2px;
-  min-width: 14px;
+#tray,
+#language{
+  margin: 0 2px;
+  padding: 0 1px;
+  min-width: 12px;
 }
 
 /* subtle separators */
 #network,
 #pulseaudio,
 #cpu,
-#battery {
+#memory,
+#battery,
+#language {
   border-left: 1px solid rgba(255, 255, 255, 0.04);
 }
 
@@ -147,13 +150,14 @@
 #battery,
 #network,
 #bluetooth,
-#pulseaudio {
+#pulseaudio,
+#language {
   padding: 0 8px;
   border-radius: 6px;
   transition: all 0.2s ease;
 }
 /* =====================================================
-   CPU (KERNEL-STYLE)
+   CPU & Memory (KERNEL-STYLE)
 ===================================================== */
 #cpu {
   color: #93c5fd;
@@ -165,6 +169,13 @@
 #cpu:hover {
   background-color: rgba(147,197,253,0.12);
   text-shadow: 0 0 8px rgba(147,197,253,0.8);
+}
+
+#memory {		
+  color: #67e8f9;;
+  padding: 0 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
 }
 
 
@@ -201,7 +212,7 @@
    NETWORK (KERNEL-STYLE)
 ===================================================== */
 #network {
-  color: #67e8f9;
+  color: #38bdf8;
 }
 
 #network:hover {
@@ -213,7 +224,7 @@
    BLUETOOTH (KERNEL-STYLE)
 ===================================================== */
 #bluetooth {
-  color: #a5b4fc;
+  color: #f97316;
 }
 
 #bluetooth:hover {
@@ -276,36 +287,6 @@ window.nowplaying-art {
 /* =====================================================
    APP LAUNCHERS (BRAVE + VS CODE)
 ===================================================== */
-#custom-brave,
-#custom-code {
-  padding: 0 8px;
-  margin-right: 4px;
-  border-radius: 6px;
-  font-size: 13px;
-
-  transition: all 0.2s ease;
-}
-
-/* Brave */
-#custom-brave {
-  color: #f97316;
-}
-
-#custom-brave:hover {
-  background-color: rgba(249,115,22,0.14);
-  text-shadow: 0 0 8px rgba(249,115,22,0.8);
-}
-
-/* VS Code */
-#custom-code {
-  color: #38bdf8;
-}
-
-#custom-code:hover {
-  background-color: rgba(56,189,248,0.14);
-  text-shadow: 0 0 8px rgba(56,189,248,0.8);
-}
-
 /* =====================================================
    SCREEN RECORDING
 ===================================================== */
@@ -315,11 +296,10 @@ window.nowplaying-art {
 }
 
 /* =====================================================
-   VOICE TYPE
+   Language
 ===================================================== */
-#custom-voxtype.recording {
-  color: #f472b6;
-  text-shadow: 0 0 8px rgba(244,114,182,0.8);
+#language{
+  color: #b0e0e6;
 }
 
 /* =====================================================
