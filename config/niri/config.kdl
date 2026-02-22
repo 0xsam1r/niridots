@@ -60,7 +60,6 @@ environment {
 
 spawn-at-startup "waybar"
 spawn-at-startup "swww-daemon"
-spawn-at-startup "nm-applet --indicator"
 spawn-sh-at-startup "eww daemon & eww open clock"
 
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell" // To run a shell command
