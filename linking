@@ -9,27 +9,28 @@ backup="$config/$(date +%Y-%m-%d_%H-%M-%S).bac"
 # TODO
 # ====================================
 # [X] Link configrations
-# 	[X] bachup any old configraions 
-# [] install needed fonts 
+# 	[X] bachup any old configraions
+# [] install needed fonts
 # [] install icons
 # [] get wallpapers
 # =====================================
 echo "==== > configrations ============================================================="
-for dir in "$dotfiles"/* ; do 
+for dir in "$dotfiles"/*; do
 	name=$(basename $dir)
 	target="$config/$name"
-	
-	if [[ -L $target ]] ; then
+
+	if [[ -L $target ]]; then
 		echo "> $target  ====> link [delete]"
 		rm $target
-	elif [[ -e $target ]] ; then # no need to check file {format: path/dir}
+		echo "linking..... $dir -> $target"
+	elif [[ -e $target ]]; then # no need to check file {format: path/dir}
 		echo "> $target  ====> directory [backup]"
 		mkdir -p $backup
 		mv $target $backup
 	fi
 
 	# echo "linking..... $dir -> $target"
-	ln -s $dir $target 
+	ln -s $dir $target
 done
 
 echo "> link env for zsh in $HOME"
