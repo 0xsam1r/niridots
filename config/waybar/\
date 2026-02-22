@@ -5,7 +5,7 @@
 	"spacing": 0,
 	"height": 26,
 	"modules-left": ["custom/kernel","custom/operator" ,"niri/workspaces", "network", "bluetooth"],
-	"modules-center": ["clock"],
+	"modules-center": ["clock", "custom/update", "custom/voxtype", "custom/screenrecording-indicator"],
 	"modules-right": [
 		"tray",
 		"pulseaudio",
@@ -19,7 +19,7 @@
 		"on-click": "activate",
 		"format": "{icon}",
 		"format-icons": {
-			"default": "🗺",
+			"default": "ඞ",
 			"active": "💥"
 		}
 	},
@@ -83,6 +83,15 @@
 		"format-plugged": "🗲 {icon}",
 		
 		"format-icons": {
+			"charging":  [
+				"▱▱▱▱▱", 
+				"▰▱▱▱▱",
+				"▰▰▱▱▱", 
+				"▰▰▰▱▱", 
+				"▰▰▰▰▱", 
+				"▰▰▰▰▰"
+			],
+
 			"default": [
 				"▱▱▱▱▱", 
 				"▰▱▱▱▱",
@@ -98,7 +107,6 @@
 			"critical": 10
 		}
 	},
-
 	"bluetooth": {
 		"format": "󰂲",
 		"format-connected": "󰂱 {device_alias}",
@@ -107,7 +115,6 @@
 		"tooltip-format": "{device_alias}",
 		"on-click": "blueman-manager"
 	},
-
 	"pulseaudio": {
 		"format": "{icon} {volume}%",
 		"format-muted": " Muted",
@@ -116,13 +123,28 @@
 			"default": ["", " ", " "]
 		},
 		"scroll-step": 5,
-		"on-click": "",
-		"on-click-right": ""
+		"on-click": "omarchy-launch-audio",
+		"on-click-right": "pamixer -t"
 	},
-
+	"group/tray-expander": {
+		"orientation": "inherit",
+		"drawer": {
+			"transition-duration": 600,
+			"children-class": "tray-group-item"
+		},
+		"modules": ["custom/expand-icon", "tray"]
+	},
+	"custom/expand-icon": {
+		"format": "",
+		"tooltip": false,
+		"on-scroll-up": "",
+		"on-scroll-down": "",
+		"on-scroll-left": "",
+		"on-scroll-right": ""
+	},
 	"tray": {
 		"icon-size": 12,
-		"spacing": 15
+		"spacing": 17
 	},
 
 	"custom/kernel": {
