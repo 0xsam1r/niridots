@@ -1,0 +1,10 @@
+# Lock screen after 300 seconds (5 minutes) of inactivity
+timeout 300 'niri msg action switch-layout 0 && hyprlock'
+
+# Turn off displays after another 300 seconds (10 minutes total)
+timeout 240 'notify-send "you are idle"' 
+after-resume 'notify-send "Welcome Back"'
+
+# Lock the screen before the system goes to sleep (suspend/hibernate)
+before-sleep 'niri msg action switch-layout 0 && hyprlock'
+
