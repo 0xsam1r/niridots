@@ -9,8 +9,8 @@
   border-radius: 0;
   min-height: 0;
 
-  font-family: "JetBrainsMono Nerd Font", monospace;
-  font-size: 12px;
+  font-family: "DepartureMono Nerd Font","JetBrainsMono Nerd Font";
+  font-size: 14px;
 }
 
 #waybar {
@@ -185,6 +185,7 @@
 ===================================================== */
 #battery {
   color: #86efac;
+  font-size: 20px;
 }
 
 #battery:hover {
@@ -336,7 +337,7 @@ tooltip {
   border: 1px solid rgba(56,189,248,0.35);
 
   padding: 6px 8px;
-  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-family: "DepartureMono Nerd Font", monospace;
   font-size: 11px;
 
   box-shadow:

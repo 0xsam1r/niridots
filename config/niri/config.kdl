@@ -61,6 +61,8 @@ environment {
 spawn-at-startup "waybar"
 spawn-at-startup "swww-daemon"
 spawn-sh-at-startup "eww daemon & eww open clock"
+spawn-sh-at-startup "systemctl --user start hyprpolkitagent"
+spawn-sh-at-startup "swayidle"
 
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell" // To run a shell command
 

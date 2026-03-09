@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-dotfiles="$HOME/dotfiles/niridots/config"
+dotfiles="$HOME/niridots/config"
 config="$HOME/.config"
 backup="$config/$(date +%Y-%m-%d_%H-%M-%S).bac"
 
@@ -29,7 +29,7 @@ for dir in "$dotfiles"/*; do
 		mv $target $backup
 	fi
 
-	# echo "linking..... $dir -> $target"
+	echo "linking..... $dir -> $target"
 	ln -s $dir $target
 done
 
