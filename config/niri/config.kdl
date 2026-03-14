@@ -276,6 +276,10 @@ binds {
         spawn-sh "~/.config/niri/mirror-toggle.sh"
     }
 
+    Alt+Shift+Space {
+        spawn-sh "~/.config/niri/toggle-kb.sh"
+    }
+
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
     Mod+Up    { focus-window-up; }

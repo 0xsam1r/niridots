@@ -7,4 +7,4 @@ niri msg action switch-layout next
 current_layout=$(niri msg -j keyboard-layouts | jq -r '.names[.current_idx]')
 
 # Send notification
-notify-send -a "Keyboard Layout" -t 800 "Switched to: $current_layout"
+notify-send "Keyboard Layout" "Switched to: $current_layout"
