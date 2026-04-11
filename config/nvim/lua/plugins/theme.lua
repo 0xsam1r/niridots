@@ -4,11 +4,11 @@ return {
   "folke/tokyonight.nvim",
   lazy = false,
   priority = 10000,
-  opts = {},
-  init = function()
-    vim.cmd.colorscheme "tokyonight-night"
+  config = function()
+    require("tokyonight").setup({ style = "night" })
+    vim.cmd("colorscheme tokyonight")
   end,
-  },
+},
   { "rafi/awesome-vim-colorschemes", lazy = true },
 
     -- Catppuccin (very popular, pastel)

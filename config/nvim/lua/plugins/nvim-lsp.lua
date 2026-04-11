@@ -220,7 +220,20 @@ return {
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
-        ts_ls = {},
+        ts_ls = {
+          settings = {
+            typescript = {
+              preferences = {
+                includePackageJsonAutoImports = "auto",
+              },
+            },
+            javascript = {
+              preferences = {
+                includePackageJsonAutoImports = "auto",
+              },
+            },
+          },
+        },
         --#region
         
         -- Markdown Language Sever
@@ -235,16 +248,13 @@ return {
         -- laravel_ls = {},
         jdtls = {},
         lua_ls = {
-          -- cmd = { ... },
-          -- filetypes = { ... },
-          -- capabilities = {},
           settings = {
             Lua = {
-              completion = {
-                callSnippet = 'Replace',
+              completion = { callSnippet = 'Replace' },
+              workspace = {
+                checkThirdParty = false,               -- add this
+                library = vim.api.nvim_get_runtime_file("", true), -- add this
               },
-              -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-              -- diagnostics = { disable = { 'missing-fields' } },
             },
           },
         },
