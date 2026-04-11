@@ -28,7 +28,7 @@
 	"memory": {
 		"interval": 3,
 		/*{percentage}%*/
-		"format": "  {icon}",
+		"format": " {icon}",
 		"format-icons": [
 			"░░░░░░░░░░",
 			"█░░░░░░░░░",
@@ -46,7 +46,7 @@
 
 	"cpu": {
 		"interval": 3,
-		"format": "  {icon}",
+		"format": " {icon}",
 		"format-icons": [
 			"░░░░░░░░░░",
 			"█░░░░░░░░░",
